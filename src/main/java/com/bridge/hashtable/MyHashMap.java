@@ -23,4 +23,12 @@ public class MyHashMap<K, V> {
             mapNode.setValue(value);
         }
     }
+
+    public V remove(K key) {
+        MyMapNode<K, V> mapNode = (MyMapNode<K, V>) this.linkedList.delete(key);
+        if (mapNode == null) {
+            System.out.println("Word is not present phrase");
+        }
+        return mapNode.getValue();
+    }
 }
